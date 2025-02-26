@@ -1,0 +1,50 @@
+body {
+  background-color: #A31D1D;
+  background-image: linear-gradient(#cc7920 1px, transparent 1px), linear-gradient(90deg, #cc7920 1px, transparent 1px), radial-gradient(circle, #cc7920 3px, transparent 1px);
+  background-size: 200px 200px;
+  background-position: 0 0, 0 0, 100px 100px;
+  position: relative;
+}
+/* .wrapper {
+	background-image: url(../img/18971562.jpg);
+	background-size: 400px;
+	font-family: raleway-c;
+	overflow-x: hidden;
+} */
+
+.wrapper {
+  background-image: 
+      linear-gradient(to top, #887544a8 0%, #00000000 20%),
+      url(../img/18971562.jpg);
+      
+	background-size: 400px;
+  font-family: raleway-c;
+  overflow-x: hidden;
+  height: 100vh; /* Убедитесь, что контейнер имеет высоту */
+}
+
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 40%, #2b220dda 90%);
+  pointer-events: none;
+}
+
+/* body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background-size: auto;
+  background-repeat: repeat;
+  opacity: 0.04;
+  z-index: 9999;
+} */
+

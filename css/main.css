@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+
+@font-face {
+	font-family: 'FuturaBookC';
+	src: url(../fonts/FuturaBookC-84335ef5dad8805b83917f86c9da243f.eot) format('embedded-opentype'),
+	url(../fonts/FuturaBookC-84335ef5dad8805b83917f86c9da243f.eot) format('embedded-opentype'),
+	url(../fonts/FuturaBookC-dbe5883e4d7c358d7240bf9f2bc3d01f.woff) format('woff'),
+	url(../fonts/FuturaBookC-d1393d513ebb36598014fb87547037b7.ttf) format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url(../fonts/FuturaLightC-b5629d8f013b48bd3ab6f776d2fecfae.eot) format('embedded-opentype'),
+	url(../fonts/FuturaLightC-b5629d8f013b48bd3ab6f776d2fecfae.eot) format('embedded-opentype'),
+	url(../fonts/FuturaLightC-eea50a86cb082b72026b9fa77163a2d2.woff) format('woff'),
+	url(../fonts/FuturaLightC-df5f3bea3fbcb5d8280a59002be3a682.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'FuturaMediumC';
+	src: url(../fonts/FuturaMediumC-ea8b870aafa13678abc6826f502f0c11.eot) format('embedded-opentype'),
+	url(../fonts/FuturaMediumC-ea8b870aafa13678abc6826f502f0c11.eot) format('embedded-opentype'),
+	url(../fonts/FuturaMediumC-1aa4f3cff1881dbd1b517eef381aa108.woff) format('woff'),
+	url(../fonts/FuturaMediumC-ab9deebb5d957428ddc7deb069c328a8.ttf) format('truetype');
+	font-weight: 500;
+	font-style: italic;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'FuturaDemiC';
+	src: url(../fonts/FuturaDemiC-e0503acc785b05ed1d554903c962f149.eot) format('embedded-opentype'),
+	url(../fonts/FuturaDemiC-e0503acc785b05ed1d554903c962f149.eot) format('embedded-opentype'),
+	url(../fonts/FuturaDemiC-3881a521b65a783406ef8f7256837dc1.woff) format('woff'),
+	url(../fonts/FuturaDemiC-e10902425e35467273126ae436645df0.ttf) format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: auto;
+}
+
+.great-vibes-regular {
+	font-family: "Great Vibes", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: FuturaMediumC;
+}
+/* will-change */
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
+
+.heart-container {
+	width: 100vw;
+	height: 100vh;
+	background-color: #b89d5b;
+
+	position: absolute;
+	
+	mask:
+	radial-gradient(at 64% 31%,#000 28%,#0000 28%),
+	radial-gradient(at 34% 31%,#000 28%,#0000 28%),
+	linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+   	clip-path: polygon(-19% 0,50% 100%, 114% 0);
+
+	margin-top: -420px;
+	z-index: 0;
+
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+  
+.hero {
+	width: calc(var(--index) * 25);
+	position: absolute;
+	left: 37vw;
+	top: 22vh;
+    background: #6d0000;
+    -webkit-mask: url('../img/sherlock-holmes-1-svgrepo-com.svg') center / contain no-repeat;
+    mask: url('../img/sherlock-holmes-1-svgrepo-com.svg') center / contain no-repeat;
+	z-index: -1;
+}
+.main-header {
+	height: 100vh;
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Элементы располагаются в строку */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: left; /* Центрируем по вертикали */
+}
+.container {
+	padding: 0 7vw;
+}
+.main-title {
+	font-size: calc(var(--index) * 6);
+	/* width: min-content; */
+	/* margin: 20vh 5vw 2vh; */
+	padding-bottom: 5vh;
+	line-height: .7;
+	color: #ac1c1c;
+    text-shadow: 2px 5px 25px rgba(0, 0, 0, 0.2);
+}
+.main-text {
+	font-size: calc(var(--index) * 2);
+	width: auto;
+	margin-left: 2vw;
+	line-height: .9;
+	color: #ffffff;
+    text-shadow: 2px 5px 25px rgba(0, 0, 0, 0.9);
+}
+.text-1 {	
+	text-align: center;
+	background-color: #6d0000;
+	color: #ffffff;
+	padding: 2vh 0vw 2vh;
+	margin-bottom: -30vh;
+	font-family: Great Vibes;
+	font-size: 2.75rem;
+}
+
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 8) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+}
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+.text-block__p {
+	line-height: 1.5;
+	font-size: 1.75rem;
+	font-family: FuturaLightC;
+    margin-bottom: 2.5rem;
+}
+
+.portfolio {
+	background-color: #6d0000;
+	background-image: linear-gradient(#cc7920 1px, transparent 1px), linear-gradient(90deg, #cc7920 1px, transparent 1px), radial-gradient(circle, #cc7920 3px, transparent 1px);
+	background-size: 200px 200px;
+	background-position: 0 0, 0 0, 100px 100px;
+}
+
+.custom-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgb(255, 87, 87); /* Задаем белый цвет текста */
+    font-family: 'Great Vibes', cursive; /* Устанавливаем шрифт Great Vibes */
+	font-size: 2.75rem;
+}
